@@ -1,0 +1,6 @@
+@TinyLibrary.WebApi_HostAddress = http://localhost:5226
+
+GET {{TinyLibrary.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

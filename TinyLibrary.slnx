@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/TinyLibrary.Application/TinyLibrary.Application.csproj" />
+    <Project Path="src/TinyLibrary.Domain/TinyLibrary.Domain.csproj" />
+    <Project Path="src/TinyLibrary.Infrastructure/TinyLibrary.Infrastructure.csproj" />
+    <Project Path="src/TinyLibrary.WebApi/TinyLibrary.WebApi.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/TinyLibrary.Domain.Tests/TinyLibrary.Domain.Tests.csproj" />
+    <Project Path="tests/TinyLibrary.IntegrationTest/TinyLibrary.IntegrationTest.csproj" />
+  </Folder>
+</Solution>
