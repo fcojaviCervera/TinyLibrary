@@ -18,13 +18,13 @@ namespace TinyLibrary.Domain.Models
         public DateTimeOffset? ReturnedAt => returnedAt;
 
 
-        public Loan(Guid _bookId, Guid _memberId, DateTimeOffset _loadnedAt, int durationDays = 14)
+        public Loan(Guid bookId, Guid memberId, DateTimeOffset loanedAt)
         {
             id = Guid.NewGuid();
-            bookId = _bookId;
-            memberId = _memberId;
-            loanedAt = _loadnedAt;
-            dueAt = loanedAt.AddDays(durationDays);
+            this.bookId = bookId;
+            this.memberId = memberId;
+            this.loanedAt = loanedAt;
+            dueAt = loanedAt.AddDays(14);
             returnedAt = null;
         }
 

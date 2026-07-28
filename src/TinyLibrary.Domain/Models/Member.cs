@@ -13,12 +13,12 @@
         public string Email => email;
         public DateTimeOffset JoinedAt => joinedAt;
         public DateTimeOffset? PenalizedUntil => penalizedUntil;
-        public Member(string _name, string _email, DateTimeOffset _joinedAt)
+        public Member(string name, string email, DateTimeOffset joinedAt)
         {
             id = Guid.NewGuid();
-            name = _name;
-            email = _email;
-            joinedAt = _joinedAt;
+            this.name = name;
+            this.email = email;
+            this.joinedAt = joinedAt;
         }
 
         public void Penalize(DateTimeOffset until)

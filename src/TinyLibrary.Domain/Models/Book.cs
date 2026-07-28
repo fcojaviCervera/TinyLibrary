@@ -18,14 +18,14 @@ namespace TinyLibrary.Domain.Models
         public int TotalCopies  => totalCopies; 
         public int AvailableCopies => availableCopies; 
 
-        public Book(string _title, string _author, string _iSBN, int _totalCopies)
+        public Book(string title, string author, string iSBN, int totalCopies)
         {
             id = Guid.NewGuid();
-            title = _title;
-            author = _author;
-            iSBN = _iSBN;
-            totalCopies = _totalCopies;
-            availableCopies = _totalCopies;
+            this.title = title;
+            this.author = author;
+            this.iSBN = iSBN;
+            this.totalCopies = totalCopies;
+            this.availableCopies = totalCopies;
         }
 
         public void LendCopy()
