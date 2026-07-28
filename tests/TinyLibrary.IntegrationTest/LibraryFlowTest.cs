@@ -74,9 +74,6 @@ namespace TinyLibrary.IntegrationTest
 
             var lendBook = await lendBookResponse.Content.ReadFromJsonAsync<LoanDto>();
 
-
-
-
             //Advance time
             factory.TimeProvider.Advance(TimeSpan.FromDays(25));
 
