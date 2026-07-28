@@ -1,6 +1,6 @@
 ﻿using TinyLibrary.Domain.Exceptions;
 
-namespace TinyLibrary.Domain
+namespace TinyLibrary.Domain.Models
 {
     public class Book
     {
@@ -12,13 +12,9 @@ namespace TinyLibrary.Domain
         private int availableCopies;
 
         public Guid Id => id;
-
         public string Title => title;
-
         public string Author => author;
-
         public string ISBN => iSBN;
-
         public int TotalCopies  => totalCopies; 
         public int AvailableCopies => availableCopies; 
 

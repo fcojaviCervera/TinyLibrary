@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework.Internal;
 using TinyLibrary.Domain.Exceptions;
+using TinyLibrary.Domain.Models;
 
 namespace TinyLibrary.Domain.Tests
 {

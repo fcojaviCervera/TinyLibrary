@@ -1,6 +1,6 @@
 ﻿using TinyLibrary.Domain.Exceptions;
 
-namespace TinyLibrary.Domain
+namespace TinyLibrary.Domain.Models
 {
     public class Loan
     {
@@ -10,8 +10,6 @@ namespace TinyLibrary.Domain
         private readonly DateTimeOffset loanedAt;
         private readonly DateTimeOffset dueAt;
         private DateTimeOffset? returnedAt;
-
-
         public Guid Id => id;
         public Guid BookId => bookId; 
         public Guid MemberId => memberId; 

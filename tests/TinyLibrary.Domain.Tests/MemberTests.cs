@@ -1,4 +1,6 @@
-﻿namespace TinyLibrary.Domain.Tests
+﻿using TinyLibrary.Domain.Models;
+
+namespace TinyLibrary.Domain.Tests
 {
     public class MemberTests
     {

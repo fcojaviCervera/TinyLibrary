@@ -1,4 +1,5 @@
 ﻿using TinyLibrary.Domain.Exceptions;
+using TinyLibrary.Domain.Models;
 using TinyLibrary.Domain.Services;
 
 namespace TinyLibrary.Domain.Tests

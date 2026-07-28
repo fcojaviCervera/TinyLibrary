@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace TinyLibrary.Domain
+﻿namespace TinyLibrary.Domain.Models
 {
     public class Member
     {
@@ -13,15 +9,10 @@ namespace TinyLibrary.Domain
         private DateTimeOffset? penalizedUntil;
 
         public Guid Id => id;
-
         public string Name => name;
-
         public string Email => email;
-
         public DateTimeOffset JoinedAt => joinedAt;
-
         public DateTimeOffset? PenalizedUntil => penalizedUntil;
-
         public Member(string _name, string _email, DateTimeOffset _joinedAt)
         {
             id = Guid.NewGuid();
