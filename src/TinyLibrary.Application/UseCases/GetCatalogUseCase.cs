@@ -5,7 +5,7 @@ namespace TinyLibrary.Application.UseCases
 {
     public class GetCatalogUseCase
     {
-        public IBookRepository bookRepository;
+        private IBookRepository bookRepository;
 
         public GetCatalogUseCase(IBookRepository _bookRepository)
         {

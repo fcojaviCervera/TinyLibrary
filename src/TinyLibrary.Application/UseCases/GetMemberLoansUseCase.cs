@@ -6,8 +6,8 @@ namespace TinyLibrary.Application.UseCases
 {
     public class GetMemberLoansUseCase
     {
-        public IMemberRepository memberRepository;
-        public ILoanRepository loanRepository;
+        private IMemberRepository memberRepository;
+        private ILoanRepository loanRepository;
 
         public GetMemberLoansUseCase(IMemberRepository _memberRepository, ILoanRepository _loanRepository)
         {
@@ -27,6 +27,7 @@ namespace TinyLibrary.Application.UseCases
                 l.LoanedAt,
                 l.DueAt,
                 l.ReturnedAt
-            )).ToList());
+            )).ToList();
         }
+    }
 }
