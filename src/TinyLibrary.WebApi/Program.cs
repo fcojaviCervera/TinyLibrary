@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using TinyLibrary.Application;
 using TinyLibrary.Infrastructure;
 using TinyLibrary.Infrastructure.Persistence;
+using TinyLibrary.WebApi.ErrorHandling;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +14,9 @@ builder.Services.AddOpenApi();
 
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
+
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+builder.Services.AddProblemDetails();
 
 var app = builder.Build();
 
@@ -27,6 +31,8 @@ using (var scope = app.Services.CreateScope())
     var context = scope.ServiceProvider.GetRequiredService<LibraryDbContext>();
     context.Database.Migrate();
 }
+
+app.UseExceptionHandler();
  
 app.UseHttpsRedirection();
 
