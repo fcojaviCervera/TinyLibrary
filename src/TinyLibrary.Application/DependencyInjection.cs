@@ -1,5 +1,7 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using FluentValidation;
+using Microsoft.Extensions.DependencyInjection;
 using TinyLibrary.Application.UseCases;
+using TinyLibrary.Application.Validators;
 using TinyLibrary.Domain.Services;
 
 namespace TinyLibrary.Application
@@ -22,6 +24,9 @@ namespace TinyLibrary.Application
             services.AddScoped<ReturnBookUseCase>();
             services.AddScoped<GetMemberLoansUseCase>();
             services.AddScoped<GetCatalogUseCase>();
+
+            // Agregar validadores de FluentValidation
+            services.AddValidatorsFromAssemblyContaining<RegisterBookRequestValidator>();
 
             return services;
         }
