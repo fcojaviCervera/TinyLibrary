@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using TinyLibrary.Application;
+using TinyLibrary.Infrastructure;
 using TinyLibrary.Infrastructure.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,7 +11,8 @@ builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
-builder.Services.AddDbContext<LibraryDbContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddApplication();
+builder.Services.AddInfrastructure(builder.Configuration);
 
 var app = builder.Build();
 
